@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WebSocket Chat</title>
+  </head>
+  <link rel="stylesheet" href="styles.css">
+  <body>
+    <main>
+      <section class="modal" id="connect_modal">
+        <form class="modal__content" id="connect_form">
+          <label class="name-label">
+            <span>What's your name?</span>
+            <input type="text" value="" name="username" required>
+          </label>
+          <input type="submit" class="connect" value="Join">
+        </form>
+      </section>
+      <!-- <ul id="users"></ul> -->
+      <section class="messages" id="messages"></section>
+      <form class="post-form" id="post_form" autocomplete="off">
+        <input type="text" value="" name="message" class="message-input" required>
+        <input type="submit" class="send" value="Send">
+      </form>
+    </main>
+    <script src="client-socket.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
